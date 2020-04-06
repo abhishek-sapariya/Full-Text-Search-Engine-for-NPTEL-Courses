@@ -1,0 +1,75 @@
+PUT /nptel_final_index
+{
+  "mappings":{
+    "properties":{
+      "link":{
+     "enabled": false
+   },
+      "COURSE LAYOUT":{
+        "enabled": false
+      },
+      "Course Status :":{
+        "enabled": false
+      },
+      "Course Type :":{
+        "type": "keyword",
+        "norms": false
+      },
+      "Duration":{
+        "type": "keyword",
+        "norms": false
+      },
+      "Start Date :":{
+        "type": "text"
+      },
+      "End Date":{
+        "type": "text"
+      },
+      "Categaory":{
+        "type": "keyword",
+        "null_value": "NULL",
+        "fields": {
+          "english":{
+            "type":"text",
+            "analyzer":"english"
+          }
+        }
+      },
+      "Level :":{
+        "type": "keyword",
+        "norms": false
+      },
+      "title":{
+        "type": "text",
+	"fields":{
+	  "english":{
+	    "type":"text",
+	    "analyzer":"english"
+	  }
+	}
+      },
+      "University":{
+        "type": "keyword",
+        "null_value": "NULL",
+        "fields": {
+          "english":{
+            "type":"text",
+            "analyzer":"english"
+          }
+        }
+      },
+      "Professor":{
+        "type": "text",
+    	"fields": {
+          "english":{
+            "type":"text",
+            "analyzer":"english"
+          }
+        }
+      },
+      "description":{
+        "type": "text"
+      }
+    }
+  }
+}
